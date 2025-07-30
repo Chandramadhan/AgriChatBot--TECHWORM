@@ -34,7 +34,7 @@ Agri Bot is an AI-powered multilingual chatbot built to assist farmers and agric
 
 - Python 3.8 or higher
 - Groq-compatible OpenAI API key
-- Recommended to use a virtual environment
+- Recommended: use a virtual environment
 
 Install core dependencies:
 
@@ -53,6 +53,7 @@ Install dependencies
 pip install -r requirements.txt
 
 Set up environment variables
+
 Create a .env file in the root directory:
 
     GROQ_API_KEY=your_groq_api_key
@@ -61,7 +62,7 @@ Create a .env file in the root directory:
 
 streamlit run app.py
 
-You’ll see a local link like http://localhost:8501 to open in your browser.
+Once launched, open the link shown in your terminal (e.g. http://localhost:8501) to interact with the chatbot.
 🎨 UI Overview
 
     🧑‍🌾 Chat Panel: Ask farming-related questions in your native language
@@ -70,7 +71,7 @@ You’ll see a local link like http://localhost:8501 to open in your browser.
 
     🔄 Automatic Translation: Input is translated → processed → output retranslated
 
-    💡 Real-time Query Resolution: Instant fetch from Wikipedia/Arxiv/DDG
+    💡 Live Web Search: Wikipedia, Arxiv, DuckDuckGo for real-time responses
 
 🔍 How It Works
 
@@ -82,107 +83,48 @@ D --> E[Generate Answer]
 E --> F[Translate to User Language]
 F --> G[Display Response in Streamlit]
 
-🚧 Future Improvements
+🏗 Folder Structure
 
-    🎙 Voice input & TTS (text-to-speech) support
-
-    📈 Fine-tune models for agriculture domain
-
-    📱 Mobile-first UI experience
-
-    🧠 Integrate vector DB (like FAISS) for domain-specific memory
-
-🤝 Contributing
-
-We welcome contributions! Please read CONTRIBUTING.md for setup, branching, and commit guidelines.
-📄 License
-
-This project is licensed under the MIT License.
-🌐 Links
-
-    🔗 Live Demo (if hosted)
-
-    📘 Documentation
-
-    🧑‍💻 Author: @yourusername
-
-
----
-
-## 📁 Recommended Files to Add:
-
-1. **`.env.example`**
-```env
-GROQ_API_KEY=your_api_key_here🔧 Installation Guide
-
-    Clone the repo
-
-git clone https://github.com/yourusername/agri-bot.git
-cd agri-bot
-
-Install dependencies
-
-pip install -r requirements.txt
-
-Set up environment variables
-Create a .env file in the root directory:
-
-    GROQ_API_KEY=your_groq_api_key
-
-▶️ Running the App
-
-streamlit run app.py
-
-You’ll see a local link like http://localhost:8501 to open in your browser.
-🎨 UI Overview
-
-    🧑‍🌾 Chat Panel: Ask farming-related questions in your native language
-
-    🌍 Sidebar Language Selector: Choose your preferred language
-
-    🔄 Automatic Translation: Input is translated → processed → output retranslated
-
-    💡 Real-time Query Resolution: Instant fetch from Wikipedia/Arxiv/DDG
-
-🔍 How It Works
-
-graph LR
-A[User Input] --> B[Language Detection]
-B --> C[Translate to English]
-C --> D[AI Model via Groq API]
-D --> E[Generate Answer]
-E --> F[Translate to User Language]
-F --> G[Display Response in Streamlit]
+agri-bot/
+├── app.py
+├── .env.example
+├── requirements.txt
+├── README.md
+└── /assets
+    └── demo.png
 
 🚧 Future Improvements
 
-    🎙 Voice input & TTS (text-to-speech) support
+    🎙 Voice input & audio responses
 
-    📈 Fine-tune models for agriculture domain
+    📚 Domain-specific fine-tuned LLMs
 
-    📱 Mobile-first UI experience
+    📱 Mobile-optimized UI
 
-    🧠 Integrate vector DB (like FAISS) for domain-specific memory
+    🧠 Vector database integration (FAISS / ChromaDB)
 
 🤝 Contributing
 
-We welcome contributions! Please read CONTRIBUTING.md for setup, branching, and commit guidelines.
+We welcome contributions from the community!
+
+    Fork this repository
+
+    Create a new branch (git checkout -b feature/your-feature)
+
+    Make your changes and commit (git commit -m "Add your feature")
+
+    Push to your fork (git push origin feature/your-feature)
+
+    Open a Pull Request
+
+Make sure your code follows best practices and includes proper docstrings/comments.
 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License
 🌐 Links
 
-    🔗 Live Demo (if hosted)
+    🔗 Live Demo (if deployed)
 
-    📘 Documentation
+    📘 Docs
 
-    🧑‍💻 Author: @yourusername
-
-
----
-
-## 📁 Recommended Files to Add:
-
-1. **`.env.example`**
-```env
-GROQ_API_KEY=your_api_key_here
+    👤 Author: @yourusername
